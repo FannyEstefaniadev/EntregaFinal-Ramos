@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog&Cats</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Mulish:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+
+
+    <!--Inicio oculto-->
+    <section class="encabezado">
+      <div class="contenedor-navegacion">
+        <div class="contenido-navegacion contenedor">
+          <div class="logo">
+            <h2><span class="celeste">Dog</span><span>&</span><span class="celeste">Cats</span></h2>
+
+
+          </div>
+          <nav class="navegacion ocultar">
+            <a href="index.html">Inicio</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Contacto</a>
+            <a href="carrito.html"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPdJREFUSEvtVcsRgjAQfQs6SBfQCXSClaCVOFYCnUgXiELWiQMO36ygjBdzZLPvxyYhrLxoZXy8RXDPOSBCTIQAQAYgVQrnrUupJFAkKG8cEeM0AXS0HTqYSIwEWrllIakBnmCcs6csRABi/V0phCYnRoKqYK1cgw2UNs6YkW52FE65kAguADxLwSeXdPavVTvR9cx2yF9KwLrRdmhUSFWwsa57O43llZN6UqThMNU7jjoEjaJP0PuORwmaSKQI+vWx/b8lmBvVbAd/gsE5kKZGiuz/D6SEIEb0jbuof313TnLvaRQVj2zIlMK+/QCJT+YSlnbP6gQP9ea1GQ4RkJ0AAAAASUVORK5CYII=" /></a>
+
+          </nav>
+          <div class="hamburguesa">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="perrosLindos" id="correa">
+      <h4 class="lili">En Dog&Cats</h4>
+      <h2 class="lili"> Descubre el paraíso para tu</h2>
+      <h2 class="lili"> amigo en nuestra </h2>
+      <h2 class="lili">tienda web</h2>
+      <p class="lili">AnimalCute</p>
+    </section>
+
+    <!--cart-->
+
+    <div class="cart-container">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Imagen</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <table id="tablaCarrito">
+            <!-- Aquí se insertarán las filas generadas dinámicamente -->
+          </table>
+          <!--
+        <tr>
+          <td>
+            <div class="product-info">
+              <span class="product-name">Nombre del producto</span>
+            </div>
+          </td>
+
+          <td><img src="ruta-de-la-imagen.jpg" alt="Producto"></td>
+         
+         
+          <td>
+            <input type="number" value="1" min="1" class="quantity-input">
+          </td>
+
+          <td class="subtotal">$50.00</td>
+        </tr>
+        -->
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+
+
+    <footer class="footer">
+      <p>Esta página es exclusiva de ropa y accesorios para mascotas. ¡Encuéntranos en nuestras páginas de
+        Facebook e Instagram!</p>
+      <ul class="redes-sociales">
+        <li><a href="https://www.facebook.com/profile.php?id=100092966164722"><img src="img/icons8-facebook-48.png"
+              alt=""></a></li>
+        <li> <a href="https://www.instagram.com/dogcats463/"><img src="img/icons8-instagram-48.png" alt=""></a>
+        </li>
+      </ul>
+      <p>Aceptamos los siguientes medios de pago:</p>
+      <ul class="medios-pago">
+        <li><img src="img/icons8-visa-48.png" alt="Visa"></li>
+        <li><img src="img/icons8-mastercard-48.png" alt="Mastercard"></li>
+        <li><img src="img/icons8-paypal-48.png" alt="PayPal"></li>
+        <li><img src="img/icons8-mercado-pago-48.png" alt="MercadoPago"></li>
+      </ul>
+    </footer>
+
+  </header>
+
+
+  <script src="productos.js"></script>
+</body>
+
+</html>
