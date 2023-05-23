@@ -116,21 +116,21 @@ const productos = [
       productoNombre: "Producto 9",
       productoDescripcion: "AnimalCute",
       productoPrecio: 2080,
-      id: 9,
+      id: 10,
     },
     {
       imgSrc: "img2moda/moda11.jpeg",
       productoNombre: "Producto 9",
       productoDescripcion: "AnimalCute",
       productoPrecio: 2600,
-      id: 9,
+      id: 11,
     },
     {
       imgSrc: "img2moda/moda12.jpg",
       productoNombre: "Producto 10",
       productoDescripcion: "AnimalCute",
       productoPrecio: 2500,
-      id: 10,
+      id: 12,
     }
   ];
   

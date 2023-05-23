@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dog&Cats</title>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +16,13 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="style.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
 </head>
 
 <body>
-
   <header>
+
 
     <!--Inicio oculto-->
     <section class="encabezado">
@@ -29,8 +31,8 @@
           <div class="logo">
             <h2><span class="celeste">Dog</span><span>&</span><span class="celeste">Cats</span></h2>
 
-          </div>
 
+          </div>
           <nav class="navegacion ocultar">
             <a href="index.html">Inicio</a>
             <a href="jsonajax.html">Datos</a>
@@ -46,67 +48,45 @@
       </div>
     </section>
 
-    <!-- parrafo de bienvenida -->
-    <section class="hero-media" id="hero">
-      <h4>Bienvenido !</h4>
-      <h2> Tu mascota te mira mal</h2>
 
-      <h2>Te falta nuestros productos</h2>
-      <p>Lindos accesorios para mascotas</p>
-      <!-- <button>Compra ahora!</button>-->
-    </section>
+<!--botoon json-->
 
-    <!-- imagenes de caracteristicas-->
-    <section id="característica" class="section-p1">
+<div class="conteinerjson">
+    <div class="sectionjson">
+        <button class="btn" id="botonj">DATOS</button>
 
-      <div class="fe-box">
-        <img src="img/f1.png" alt="envio">
-        <h6>Envio Gratis</h6>
-      </div>
-      <div class="fe-box">
-        <img src="img/f2.png" alt="orden">
-        <h6>Orden Online</h6>
-      </div>
-      <div class="fe-box">
-        <img src="img/f3.png" alt="ahorro">
-        <h6>Ahorro</h6>
-      </div>
-      <div class="fe-box">
-        <img src="img/f4.png" alt="promociones">
-        <h6>Promociones</h6>
-      </div>
-      <div class="fe-box">
-        <img src="img/f5.png" alt="venta">
-        <h6>Venta Feliz</h6>
-      </div>
-      <div class="fe-box">
-        <img src="img/f6.png" alt="soporte">
-        <h6>Soporte</h6>
-      </div>
+        <table>
+            <thead>
+              <tr>
+                  <th>Productos</th>
+                  <th>Marca</th>
+                  <th>Precio</th>
+                  <th>Id</th>
+              </tr>
+            </thead>
+            <tbody id="res">
 
-    </section>
+            </tbody>
+        </table>
 
-    <!--imagenes de animales luciendo los productos  -->
-    <section id="product1" class="section-p1">
-      <h2>Productos Destacados</h2>
-      <p>¡Muestra a tu mascota a la moda con nuestra nueva colección!</p>
-      <!--
-    <div id="carrito">
-      <h2> compras</h2>
-      <p>Precio total: $0</p>
-      <button class="myButton" id="comprar">Confirmar compra</button>
-    </div>-->
+    </div>
+</div>
 
-      <div class="contenedor-producto">
-        <!--Productos mapeados en el javascript-->
-      </div>
 
-    </section>
+
+
+
+
+
+
+
+
+
 
 
     <footer class="footer">
-      <p>Esta página es exclusiva de ropa y accesorios para mascotas. ¡Encuéntranos en nuestras páginas de Facebook e
-        Instagram!</p>
+      <p>Esta página es exclusiva de ropa y accesorios para mascotas. ¡Encuéntranos en nuestras páginas de
+        Facebook e Instagram!</p>
       <ul class="redes-sociales">
         <li><a href="https://www.facebook.com/profile.php?id=100092966164722"><img src="img/icons8-facebook-48.png"
               alt=""></a></li>
@@ -122,17 +102,10 @@
       </ul>
     </footer>
 
-
-
-
   </header>
 
 
-
-
-
-
-  <script src="script.js"></script>
+  <script src="ajax.js"></script>
 </body>
 
 </html>

@@ -113,23 +113,34 @@ const productos = [
     productoNombre: "Producto 9",
     productoDescripcion: "AnimalCute",
     productoPrecio: 2080,
-    id: 9,
+    id: 10,
   },
   {
     imgSrc: "img2moda/moda11.jpeg",
     productoNombre: "Producto 9",
     productoDescripcion: "AnimalCute",
     productoPrecio: 2600,
-    id: 9,
+    id: 11,
   },
   {
     imgSrc: "img2moda/moda12.jpg",
     productoNombre: "Producto 10",
     productoDescripcion: "AnimalCute",
     productoPrecio: 2500,
-    id: 10,
+    id: 12,
   }
 ];
+
+//alarma 
+
+document.addEventListener('DOMContentLoaded', function() {
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Esta pagina no funciona temporalmente!',
+    footer: '<a href=""></a>'
+  });
+});
 
 
 // generacion de productos 
@@ -165,11 +176,11 @@ productos.forEach(producto => {
 
   const button = document.createElement("button");
   button.classList.add("producto");
-  button.setAttribute("id", "precio");
+  button.setAttribute("id", "agregarProducto");
   button.textContent = "Comprar";
-  button.addEventListener("click", function () {
+  button.addEventListener("click", function() {
     carrito.push(producto);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+   localStorage.setItem("carrito", JSON.stringify(carrito));
     console.log(JSON.parse(localStorage.getItem("carrito")));
 
   });
@@ -185,10 +196,10 @@ contenedorProducto.appendChild(container);
 
 
 //generacion de carrito
-/*
+
 let carrito = []
 
-
+/*
 carrito.forEach(producto => {
   const carTr = document.createElement("tr");
   const carTd = document.createElement("td");

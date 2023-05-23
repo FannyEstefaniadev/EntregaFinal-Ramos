@@ -1,0 +1,82 @@
+ [
+    {
+     "productos" : "Producto 1 - Buso Rosa",
+     "marca": "AnimalCute",
+     "precio": 2500,
+     "id": 1
+    },
+    {
+        "productos" : "Producto 2 - Buso Siervo",
+      "marca": "AnimalCute",
+      "precio": 2300,
+      "id": 2
+    },
+    {
+      "productos": "Producto 3 - Remera a Rallas",
+      "marca": "AnimalCute",
+      "precio": 2400,
+      "id": 3
+    },
+    {
+      "productos": "Producto 4 - Remera Supreme",
+      "marca": "AnimalCute",
+      "precio": 2790,
+      "id": 4
+    },
+    {
+      
+      "productos": "Producto 5 - Vestido Rosa",
+      "marca": "AnimalCute",
+      "precio": 2620,
+      "id": 5
+    },
+    {
+      
+      "productos": "Producto 6 - Anteojo Cute",
+      "marca": "AnimalCute",
+      "precio": 2070,
+      "id": 6
+    },
+    {
+    
+      "productos": "Producto 7 - Pillama Azul",
+      "marca": "AnimalCute",
+      "precio": 2129,
+      "id": 7
+    },
+    {
+      
+      "productos": "Producto 8 - Buso Super Man",
+      "marca": "AnimalCute",
+      "precio": 2460,
+      "id": 8
+    },
+    {
+    
+      "productos": "Producto 9 - Remera Blanca Blijdarp",
+      "marca": "AnimalCute",
+      "precio": 2209,
+      "id": 9
+    },
+    {
+      
+      "productos": "Producto 10 - Remera a Rallas Chanel",
+      "marca": "AnimalCute",
+      "precio": 2080,
+      "id": 10
+    },
+    {
+      
+      "productos": "Producto 11 - Conjunto Jardinero Amarillo y Verde",
+      "marca": "AnimalCute",
+      "precio": 2600,
+      "id": 11
+    },
+    {
+      
+      "productos": "Producto 12 - Conjunto de Dectetive",
+      "marca": "AnimalCute",
+      "precio": 2500,
+      "id": 12
+    }
+  ]
