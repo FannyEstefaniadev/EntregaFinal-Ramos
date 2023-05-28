@@ -54,7 +54,7 @@ function traerDatos(){
 
 const xhttp = new XMLHttpRequest();
 
-xhttp.open('GET', 'datos.json',true);
+xhttp.open('GET', '../json/datos.json',true);
 
 xhttp.send();
 

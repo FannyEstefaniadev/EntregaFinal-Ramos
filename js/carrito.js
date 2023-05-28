@@ -1,6 +1,7 @@
 
 //menu
-
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+console.log(carrito);
 const menu = document.querySelector('.hamburguesa');
 const navegacion = document.querySelector('.navegacion');
 const overlay = document.createElement('div');
@@ -42,105 +43,15 @@ const cerrarMenu = (boton) => {
 }
 
 
-
-
-//productos
-
-
-const productos = [
-    {
-      imgSrc: "img2moda/moda1.jpg",
-      productoNombre: "Producto 1",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2500,
-      id: 1,
-    },
-    {
-      imgSrc: "img2moda/moda2.jpg",
-      productoNombre: "Producto 2",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2300,
-      id: 2,
-    },
-    {
-      imgSrc: "img2moda/moda3.jpg",
-      productoNombre: "Producto 3",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2400,
-      id: 3,
-    },
-    {
-      imgSrc: "img2moda/moda4.jpg",
-      productoNombre: "Producto 4",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2790,
-      id: 4,
-    },
-    {
-      imgSrc: "img2moda/moda5.jpeg",
-      productoNombre: "Producto 5",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2620,
-      id: 5,
-    },
-    {
-      imgSrc: "img2moda/moda6.jpg",
-      productoNombre: "Producto 6",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2070,
-      id: 6,
-    },
-    {
-      imgSrc: "img2moda/moda7.jpg",
-      productoNombre: "Producto 7",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2129,
-      id: 7,
-    },
-    {
-      imgSrc: "img2moda/moda8.webp",
-      productoNombre: "Producto 8",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2460,
-      id: 8,
-    },
-    {
-      imgSrc: "img2moda/moda9.jpg",
-      productoNombre: "Producto 9",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2209,
-      id: 9,
-    },
-    {
-      imgSrc: "img2moda/moda10.jpg",
-      productoNombre: "Producto 9",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2080,
-      id: 10,
-    },
-    {
-      imgSrc: "img2moda/moda11.jpeg",
-      productoNombre: "Producto 9",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2600,
-      id: 11,
-    },
-    {
-      imgSrc: "img2moda/moda12.jpg",
-      productoNombre: "Producto 10",
-      productoDescripcion: "AnimalCute",
-      productoPrecio: 2500,
-      id: 12,
-    }
-  ];
-  
-  
 //generacion de carrito
 
-let carrito = []
+fetch("../json/carrito.json")
+.then((resp)=> resp.json())
+.then((data1) => {
+carrito = [data1]
 
 
-carrito.forEach(producto => {
+carrito[0].forEach(producto => {
   const carTr = document.createElement("tr");
   const carTd = document.createElement("td");
   const carDiv = document.createElement("div");
@@ -171,7 +82,7 @@ carrito.forEach(producto => {
   inputTd.appendChild(carInput);
   carTr.appendChild(inputTd);
 
-  const totalTd =createElement("td");
+  const totalTd = document.createElement("td");
   totalTd.classList.add("subtotal");
   totalTd.textContent = producto.productoPrecio;
 
@@ -183,3 +94,7 @@ carrito.forEach(producto => {
 });
 
 localStorage.setItem("carrito", JSON.stringify(carrito));
+
+
+});
+

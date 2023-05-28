@@ -301,7 +301,7 @@ img{
 /* Inicio - hero */
 
 #hero {
-    background-image: url("img/gruñon-hero.jpg");
+    background-image: url("../img/gruñon-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
@@ -592,7 +592,7 @@ img{
 
   
 #correa {
-    background-image: url("img/Our\ four-legged\ friends\ need\ your\ help.png");
+    background-image: url("../img/Our\ four-legged\ friends\ need\ your\ help.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 60vh;
