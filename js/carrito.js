@@ -1,7 +1,12 @@
+// obtener productos del local storage
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+console.log(carrito);
+
 
 //menu
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-console.log(carrito);
+
 const menu = document.querySelector('.hamburguesa');
 const navegacion = document.querySelector('.navegacion');
 const overlay = document.createElement('div');
@@ -45,13 +50,11 @@ const cerrarMenu = (boton) => {
 
 //generacion de carrito
 
-fetch("../json/carrito.json")
-.then((resp)=> resp.json())
-.then((data1) => {
-carrito = [data1]
+
+//generacion de carrito
 
 
-carrito[0].forEach(producto => {
+carrito.forEach((producto, index) => {
   const carTr = document.createElement("tr");
   const carTd = document.createElement("td");
   const carDiv = document.createElement("div");
@@ -66,6 +69,7 @@ carrito[0].forEach(producto => {
 
   const imagTd = document.createElement("td");
   const imagImag = document.createElement("img");
+  imagImag.classList.add("imagImagP");
   imagImag.setAttribute("src", producto.imgSrc);
   imagImag.setAttribute("alt", "producto");
 
@@ -73,11 +77,11 @@ carrito[0].forEach(producto => {
   carTr.appendChild(imagTd);
 
   const inputTd = document.createElement("td");
-  const carInput =document.createElement("input");
+  const carInput = document.createElement("input");
   carInput.classList.add("quantity-input");
-  carInput.setAttribute("type","number" );
-  carInput.setAttribute("value",producto.cantidad);
-  carInput.setAttribute("min","1" );
+  carInput.setAttribute("type", "number");
+  carInput.setAttribute("value", producto.cantidad);
+  carInput.setAttribute("min", "1");
 
   inputTd.appendChild(carInput);
   carTr.appendChild(inputTd);
@@ -88,13 +92,40 @@ carrito[0].forEach(producto => {
 
   carTr.appendChild(totalTd);
 
+  const buttonTd = document.createElement("td");
+  const comprarButton = document.createElement("button");
+  comprarButton.classList.add("comprar-button");
+  comprarButton.textContent = "Comprar";
+
+  const cancelarButton = document.createElement("button");
+  cancelarButton.classList.add("cancelar-button");
+  cancelarButton.textContent = "Cancelar compra";
+
+  buttonTd.appendChild(comprarButton);
+  buttonTd.appendChild(cancelarButton);
+  carTr.appendChild(buttonTd);
+
   const tablaCarrito = document.getElementById("tablaCarrito");
   tablaCarrito.appendChild(carTr);
 
+  comprarButton.addEventListener("click", () => {
+      Swal.fire(
+        '¡Compra confirmada!',
+        '¡Gracias por su compra!',
+      
+      );
+    });
+
+  cancelarButton.addEventListener("click", () => {
+    // Eliminar el producto del arreglo carrito
+    carrito.splice(index, 1);
+
+    // Eliminar la fila de la tabla
+    carTr.remove();
+
+    // Actualizar el almacenamiento local
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  });
 });
 
 localStorage.setItem("carrito", JSON.stringify(carrito));
-
-
-});
-

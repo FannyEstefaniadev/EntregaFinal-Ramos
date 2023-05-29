@@ -677,3 +677,71 @@ img{
   .btn {
     margin: 60px;
   }
+
+/*
+  .imagImagP {
+    padding: 5%;
+    width: 100px;
+  }
+  #tablaCarrito{
+    width: 100%;
+  }
+*/
+
+
+  /*cart prueba*/
+
+  .comprar-button,
+.cancelar-button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.comprar-button:hover,
+.cancelar-button:hover {
+  background-color: #45a049;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-name {
+  margin-left: 8px;
+}
+
+.imagImagP {
+  width: 50px;
+  height: 50px;
+}
+
+.quantity-input {
+  width: 40px;
+  padding: 4px;
+  text-align: center;
+}

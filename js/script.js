@@ -81,7 +81,16 @@ fetch("../json/productos.json")
       const button = document.createElement("button");
       button.classList.add("producto");
       button.setAttribute("id", "agregarProducto");
-      button.textContent = "Comprar";
+      button.textContent = "Agregar";
+
+      button.addEventListener("click", () => {
+        Swal.fire(
+          '¡Agregado en el carrito!',
+        
+
+        );
+      });
+
       button.addEventListener("click", function () {
 
         agregarProducto(producto.imgSrc, producto.productoNombre, producto.productoDescripcion, producto.productoPrecio, producto.id)
@@ -103,17 +112,26 @@ fetch("../json/productos.json")
 function agregarProducto(productoImagen, nombredelProducto, descripcion, productoPrecio, productoId) {
 
   var NuevoProducto = {
-    imgSrc: productoImagen,
-    productoNombre:nombredelProducto ,
+    imgSrc: '../' + productoImagen,
+    productoNombre: nombredelProducto,
     productoDescripcion: descripcion,
-    productoPrecio:productoPrecio ,
+    productoPrecio: productoPrecio,
     id: productoId
-  
+
   };
 
-  
+  // guardar producto en local storage
 
-  console.log(NuevoProducto);
+  var carrito = JSON.parse(localStorage.getItem("carrito"));
+  if (carrito == null) {
+    carrito = [];
+  }
+  carrito.push(NuevoProducto);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  console.log(JSON.parse(localStorage.getItem("carrito")));
+
+
 }
 
 /*
