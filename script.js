@@ -42,7 +42,7 @@ const cerrarMenu = (boton) => {
 
 //productos
 
-fetch("../json/productos.json")
+fetch("productos.json")
   .then((resp) => resp.json())
   .then((data) => {
     productos = [data]
