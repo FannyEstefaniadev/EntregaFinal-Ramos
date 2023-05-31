@@ -86,7 +86,7 @@ fetch("productos.json")
       button.addEventListener("click", () => {
         Swal.fire(
           '¡Agregado en el carrito!',
-        
+
 
         );
       });
@@ -103,11 +103,16 @@ fetch("productos.json")
       product.appendChild(button);
 
       container.appendChild(product);
-    });
+      contenedorProducto.appendChild(container);
+    })
 
-    contenedorProducto.appendChild(container);
 
-  });
+  }).catch(error => {
+    console.log(error);
+  })
+
+
+
 
 function agregarProducto(productoImagen, nombredelProducto, descripcion, productoPrecio, productoId) {
 
@@ -134,55 +139,6 @@ function agregarProducto(productoImagen, nombredelProducto, descripcion, product
 
 }
 
-/*
-
-
-carrito[0].forEach(producto => {
-  const carTr = document.createElement("tr");
-  const carTd = document.createElement("td");
-  const carDiv = document.createElement("div");
-  carDiv.classList.add("product-info");
-  const carSpan = document.createElement("span");
-  carSpan.classList.add("product-name");
-  carSpan.textContent = producto.productoNombre;
-
-  carDiv.appendChild(carSpan);
-  carTd.appendChild(carDiv);
-  carTr.appendChild(carTd);
-
-  const imagTd = document.createElement("td");
-  const imagImag = document.createElement("img");
-  imagImag.setAttribute("src", producto.imgSrc);
-  imagImag.setAttribute("alt", "producto");
-
-  imagTd.appendChild(imagImag);
-  carTr.appendChild(imagTd);
-
-  const inputTd = document.createElement("td");
-  const carInput =document.createElement("input");
-  carInput.classList.add("quantity-input");
-  carInput.setAttribute("type","number" );
-  carInput.setAttribute("value",producto.cantidad);
-  carInput.setAttribute("min","1" );
-
-  inputTd.appendChild(carInput);
-  carTr.appendChild(inputTd);
-
-  const totalTd =createElement("td");
-  totalTd.classList.add("subtotal");
-  totalTd.textContent = producto.productoPrecio;
-
-  carTr.appendChild(totalTd);
-
-  const tablaCarrito = document.getElementById("tablaCarrito");
-  tablaCarrito.appendChild(carTr);
-
-});
-
-localStorage.setItem("carrito", JSON.stringify(carrito));
-
-
-*/
 
 
 
