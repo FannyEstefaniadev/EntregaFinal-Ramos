@@ -10,6 +10,7 @@
 
 
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +21,8 @@
 html {
     box-sizing: border-box;
 }
+
+
 
 
 /*hoja de estilo*/
@@ -58,6 +61,7 @@ p {
 
 /* relleno para las secciones*/
 
+
 .section-p1 {
     padding: 50px 80px;
 }
@@ -68,6 +72,8 @@ p {
 
 body {
     width: 100%;
+    background: rgb(148,187,233);
+background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(250,207,255,1) 10%, rgba(255,255,255,1) 50%, rgba(250,207,255,1) 90%, rgba(148,187,233,1) 100%);
 }
 
 *,
@@ -95,12 +101,12 @@ a {
 }
 
 
-img{
-    max-width:100%;
+img {
+    max-width: 100%;
 }
 
 .celeste {
-    color: var(--blanco);
+    color: var(--blanco); 
 }
 
 .ocultar {
@@ -110,12 +116,17 @@ img{
 .btn-cerrar {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--blanco);
+    color: #FC00FF;
     position: absolute;
     top: 0;
     right: 50px;
     user-select: none;
+ 
+
 }
+
+
+
 
 /*pantalla-completa {
     position: absolute;
@@ -205,8 +216,10 @@ img{
 
 .logo h2,
 .navegacion a {
-    color: var(--verde);
+    color: var(--violet);
 }
+
+
 
 .navegacion a {
     text-decoration: none;
@@ -280,14 +293,127 @@ img{
 }
 
 
+@media only screen and (max-width: 600px) {
+    .carritoCozon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .carritoCozon a {
+        margin-left: auto;
+    }
+
+}
+@media only screen and (min-width: 620px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(200%);
+    }
+    
+}
+
+@media only screen and (min-width: 766px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(300%);
+    }
+    
+}
+
+@media only screen and (min-width: 900px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(400%);
+    }
+    
+}
+
+
+@media only screen and (min-width: 1030px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(500%);
+    }
+    
+}
+
+@media only screen and (min-width: 1165px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(600%);
+    }
+    
+}
+
+@media only screen and (min-width: 1300px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(700%);
+    }
+    
+}
+
+
+@media only screen and (min-width: 1440px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(800%);
+    }
+    
+}
+
+
+@media only screen and (min-width: 1580px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(900%);
+    }
+    
+}
+
+
+@media only screen and (min-width: 1700px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(1000%);
+    }
+    
+}
+
+
+@media only screen and (min-width: 1865px)  {
+
+    .carritoCorazon {
+        display: flex;
+      transform: translateX(1100%);
+    }
+    
+}
+
+
+
+
+
+
+
+
 /*encabezado carrito*/
 
 .carritoC {
     display: flex;
     justify-content: flex-end;
-    
-}
 
+}
 
 
 @media(min-width:768px) {
@@ -295,6 +421,7 @@ img{
         font-size: 8rem;
     }
 }
+
 
 
 
@@ -312,7 +439,6 @@ img{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center
-
 }
 
 
@@ -341,38 +467,6 @@ img{
 
 
 
-
-#hero button {
-    box-shadow: 0px 1px 0px 0px #3dc21b;
-    background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
-    background-color: #44c767;
-    border-radius: 15px;
-    border: 1px solid #18ab29;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 7px 21px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #2f6627;
-}
-
-#hero button:hover {
-    background: linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
-    background-color: #5cbf2a;
-}
-
-#hero button:active {
-    position: relative;
-    top: 1px;
-}
-
-
-
-
-
 /* estilo de las imagenes f1 ,f2 f3, f4, f5 , f6  */
 
 #característica {
@@ -388,7 +482,7 @@ img{
     text-align: center;
     padding: 25px 15px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
-    border: 1px solid #cce7d0;
+    border: 1px solid #0c0c0c;
     border-radius: 4px;
     margin: 15px 0;
 }
@@ -555,42 +649,44 @@ img{
     background-color: #a6dcac;
     padding: 20px;
     text-align: center;
-  }
-  
-  
-  .redes-sociales,
-  .medios-pago {
+    background-color: #8EC5FC;
+background-image: linear-gradient(180deg, #8EC5FC 0%, #E0C3FC 100%);   
+}
+
+
+.redes-sociales,
+.medios-pago {
     list-style: none;
     padding: 0;
     margin: 10px 0;
-  }
-  
-  .redes-sociales li,
-  .medios-pago li {
+}
+
+.redes-sociales li,
+.medios-pago li {
     display: inline;
     margin-right: 10px;
-  }
-  
-  .redes-sociales li:last-child,
-  .medios-pago li:last-child {
+}
+
+.redes-sociales li:last-child,
+.medios-pago li:last-child {
     margin-right: 0;
-  }
-  
-  .redes-sociales a,
-  .medios-pago img {
+}
+
+.redes-sociales a,
+.medios-pago img {
     text-decoration: none;
     color: #333;
     font-size: 24px;
-  }
-  
-  .redes-sociales a:hover {
+}
+
+.redes-sociales a:hover {
     text-decoration: underline;
-  }
-  
+}
 
-  /* imagenes de carrito.html "perrosLindos*/
 
-  
+/* imagenes de carrito.html "perrosLindos*/
+
+
 #correa {
     background-image: url("../img/Our\ four-legged\ friends\ need\ your\ help.png");
     background-repeat: no-repeat;
@@ -603,7 +699,6 @@ img{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center
-
 }
 
 .lili {
@@ -619,64 +714,70 @@ img{
 
 .cart-container {
     margin-top: 20px;
-    
-  }
-  
-  .cart-table {
+
+}
+
+.cart-table {
     width: 100%;
     border-collapse: collapse;
-   
+
 }
-  
-  .cart-table th,
-  .cart-table td {
+
+.cart-table th,
+.cart-table td {
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid #ccc;
-  }
-  
-  .cart-table th {
-    background-color: #a6dcac;
+}
+
+.cart-table th {
+    background-color: #8EC5FC;
     font-weight: bold;
     color: #333;
-  }
-  
-  .cart-table .product-info {
+}
+
+.cart-table .product-info {
     display: flex;
     align-items: center;
-  }
-  
-  .cart-table .product-name {
+}
+
+.cart-table .product-name {
     margin-left: 10px;
     color: #555;
     font-weight: bold;
-  }
-  
-  .cart-table img {
+}
+
+.cart-table img {
     max-width: 100px;
     max-height: 100px;
-  }
-  
-  .cart-table .quantity-input {
+}
+
+.cart-table .quantity-input {
     width: 50px;
     text-align: center;
     border: 1px solid #b8c1b7;
     border-radius: 5px;
     padding: 5px;
-  }
-  
-  .cart-table .subtotal {
+}
+
+.cart-table .subtotal {
     font-weight: bold;
     color: #2db334;
-  }
+}
 
 
 
-  /*botoon json*/
+/*botoon json*/
 
-  .btn {
-    margin: 60px;
-  }
+.btn {
+    margin: 40px;
+
+}
+
+
+
+
+
 
 /*
   .imagImagP {
@@ -689,59 +790,60 @@ img{
 */
 
 
-  /*cart prueba*/
+/*cart */
 
-  .comprar-button,
+.comprar-button,
 .cancelar-button {
-  padding: 8px 16px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 8px;
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+
 }
 
 .comprar-button:hover,
 .cancelar-button:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 .table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .table td,
 .table th {
-  border: 1px solid #ddd;
-  padding: 8px;
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
 .table tr:nth-child(even) {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 .table tr:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
 .product-info {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .product-name {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 .imagImagP {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 .quantity-input {
-  width: 40px;
-  padding: 4px;
-  text-align: center;
+    width: 40px;
+    padding: 4px;
+    text-align: center;
 }

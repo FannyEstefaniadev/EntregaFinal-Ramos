@@ -76,15 +76,6 @@ carrito.forEach((producto, index) => {
   imagTd.appendChild(imagImag);
   carTr.appendChild(imagTd);
 
-  const inputTd = document.createElement("td");
-  const carInput = document.createElement("input");
-  carInput.classList.add("quantity-input");
-  carInput.setAttribute("type", "number");
-  carInput.setAttribute("value", producto.cantidad);
-  carInput.setAttribute("min", "1");
-
-  inputTd.appendChild(carInput);
-  carTr.appendChild(inputTd);
 
   const totalTd = document.createElement("td");
   totalTd.classList.add("subtotal");
@@ -109,11 +100,19 @@ carrito.forEach((producto, index) => {
   tablaCarrito.appendChild(carTr);
 
   comprarButton.addEventListener("click", () => {
-      Swal.fire(
-        '¡Compra confirmada!',
-        '¡Gracias por su compra!',
-      
-      );
+    Swal.fire({
+      title: '¡Compra confirmada!',
+      width: 600,
+      padding: '3em',
+      color: '#716add',
+      background: '#fff url(/images/trees.png)',
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("/images/nyan-cat.gif")
+        left top
+        no-repeat
+      `
+    })
     });
 
   cancelarButton.addEventListener("click", () => {
