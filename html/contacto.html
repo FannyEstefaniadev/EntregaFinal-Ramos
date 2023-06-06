@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog&Cats</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Mulish:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+
+
+        <!--Inicio oculto-->
+        <section class="encabezado">
+            <div class="contenedor-navegacion">
+                <div class="contenido-navegacion contenedor">
+                    <div class="logo">
+                        <a href="../index.html" style="text-decoration: none;">
+                            <h2><span class="celeste">Dog</span><span>&</span><span class="celeste">Cats</span></h2>
+                        </a>
+                    </div>
+
+                    <div class="carritoCozon">
+                        <a class="carritoCorazon" href="carrito.html"><img
+                                src="../img/icons8-carro-favorito-64.png" /></a>
+                    </div>
+
+                    <nav class="navegacion ocultar">
+                        <a href="../index.html">Inicio</a>
+                        <a href="jsonajax.html">Datos</a>
+                        <a href="contacto.html">Contacto</a>
+                    </nav>
+                    <div class="hamburguesa">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <h1 class="mt-4 mb-3">Contacto</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+    
+                <button type="submit" class="myButtonA">Enviar</button>
+            </form>
+        </div>
+    
+
+
+
+
+
+        <footer class="footer" id="footerContacto">
+            <p>Esta página es exclusiva de ropa y accesorios para mascotas. ¡Encuéntranos en nuestras páginas de
+                Facebook e Instagram!</p>
+            <ul class="redes-sociales">
+                <li><a href="https://www.facebook.com/profile.php?id=100092966164722"><img
+                            src="../img/icons8-facebook-48.png" alt=""></a></li>
+                <li> <a href="https://www.instagram.com/dogcats463/"><img src="../img/icons8-instagram-48.png"
+                            alt=""></a>
+                </li>
+            </ul>
+            <p>Aceptamos los siguientes medios de pago:</p>
+            <ul class="medios-pago">
+                <li><img src="../img/icons8-visa-48.png" alt="Visa"></li>
+                <li><img src="../img/icons8-mastercard-48.png" alt="Mastercard"></li>
+                <li><img src="../img/icons8-paypal-48.png" alt="PayPal"></li>
+                <li><img src="../img/icons8-mercado-pago-48.png" alt="MercadoPago"></li>
+            </ul>
+        </footer>
+
+    </header>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="../js/contacto.js"></script>
+</body>
+
+</html>

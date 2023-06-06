@@ -96,8 +96,36 @@ fetch("productos.json")
             left top
             no-repeat
           `
-        })
+        }).then((result) => {
+          if (result.isConfirmed) {
+            mostrarAlertaContinuarComprando();
+          }
+        });
       });
+      
+      function mostrarAlertaContinuarComprando() {
+        Swal.fire({
+          title: '¿Qué deseas hacer?',
+          text: '¿Deseas seguir comprando o ir al carrito?',
+          icon: 'question',
+          showCancelButton: true,
+          confirmButtonText: 'Seguir comprando',
+          cancelButtonText: 'Ir al carrito',
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Aquí puedes agregar el código para seguir comprando
+            Swal.fire(
+              'Seguir comprando',
+              'Continúa explorando nuestros productos.',
+              'info'
+            );
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            window.location.href = './html/carrito.html';
+          }
+        });
+      }
+
 
       button.addEventListener("click", function () {
 
